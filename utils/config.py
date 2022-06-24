@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from os import listdir
 
 # sys.path.append(os.path.dirname(__file__))
 
@@ -9,6 +10,7 @@ def get_project_root() -> Path:
 ROOT_DIR = get_project_root()
 
 TRAIN_DIR = os.path.join(ROOT_DIR, 'data/train')
+TRAIN_FILE_PATHS = [os.path.join(DATA_DIR, file) for file in listdir(TRAIN_DIR)]
 TEST_DIR = os.path.join(ROOT_DIR, 'data/test')
 INPUT_DIR = os.path.join(ROOT_DIR, 'data/input')
 LOG_DIR = os.path.join(ROOT_DIR, 'logs')
@@ -17,6 +19,7 @@ OUT_DIR = os.path.join(ROOT_DIR, 'output')
 IMAGE_DIR = os.path.join(OUT_DIR, 'images')
 
 path_config = {'train':TRAIN_DIR,
+               'train_file_paths':TRAIN_FILE_PATHS,
                 'test':TEST_DIR,
                 'input':INPUT_DIR,
                 'log':LOG_DIR,
