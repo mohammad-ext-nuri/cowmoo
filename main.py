@@ -15,7 +15,7 @@ from utils.compute import load_audio, compute, compare, score, normalise_score
 def main()->float:
     input_file_path = load_sound_file('input')
     input_file_path = input_file_path[0]
-    raw_score = score(input_file_path, path_config['train'])
+    raw_score = score(input_file_path, path_config['train_file_paths'])
     final_score = normalise_score(raw_score)
     print(f'Your hamba match is {final_score:.2%}')
     return final_score
