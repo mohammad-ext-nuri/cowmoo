@@ -10,7 +10,7 @@ def get_project_root() -> Path:
 ROOT_DIR = get_project_root()
 
 TRAIN_DIR = os.path.join(ROOT_DIR, 'data/train')
-TRAIN_FILE_PATHS = [os.path.join(DATA_DIR, file) for file in listdir(TRAIN_DIR)]
+TRAIN_FILE_PATHS = [os.path.join(TRAIN_DIR, file) for file in listdir(TRAIN_DIR)]
 TEST_DIR = os.path.join(ROOT_DIR, 'data/test')
 INPUT_DIR = os.path.join(ROOT_DIR, 'data/input')
 LOG_DIR = os.path.join(ROOT_DIR, 'logs')
